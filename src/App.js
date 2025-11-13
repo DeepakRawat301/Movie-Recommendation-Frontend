@@ -34,7 +34,7 @@ function App() {
       const response = await fetch(`${API_URL}/recommend`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ movie_name: query }),
+        body: JSON.stringify({ user_input: query }),
       });
 
       const data = await response.json();
