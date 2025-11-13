@@ -6,6 +6,7 @@ function App() {
   const [recommendations, setRecommendations] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const API_URL = process.env.REACT_APP_API_URL;
 
   const movieIcons = ["🎥", "🍿", "🎬", "📽️", "🎞️", "🎦", "🎭", "📺", "🎧", "💿"];
   const colors = [
@@ -30,10 +31,10 @@ function App() {
     setRecommendations([]);
 
     try {
-      const response = await fetch("http://localhost:5000/recommend", {
+      const response = await fetch(`${API_URL}/recommend`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ user_input: query }),
+        body: JSON.stringify({ movie_name: query }),
       });
 
       const data = await response.json();
