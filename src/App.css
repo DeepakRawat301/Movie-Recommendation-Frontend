@@ -1,38 +1,96 @@
-.App {
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.app {
+  text-align: center;
+  padding: 2rem;
+}
+
+.header h1 {
+  font-size: 2.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  color: #bdbdbd;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.search-input {
+  width: 320px;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-btn {
+  background-color: #ff004f;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.3rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.search-btn:hover {
+  background-color: #e60045;
+  transform: scale(1.05);
+}
+
+.loading {
+  margin-top: 1rem;
+  color: #ffcc00;
+}
+
+.error {
+  margin-top: 1rem;
+  color: #ff4c4c;
+}
+
+.recommendations {
+  margin-top: 3rem;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.movie-card {
+  border-radius: 15px;
+  padding: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: #222;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.movie-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.poster-placeholder {
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer {
+  margin-top: 4rem;
+  color: #aaa;
 }
